@@ -1,9 +1,5 @@
 package Random
 
 import (
-	. "github.com/esonhugh/randomize"
+	_ "github.com/esonhugh/randomize"
 )
-
-func init() {
-	_ = RandomStringGenerateDefault()
-}

@@ -40,3 +40,13 @@ func HandleFatal(e error, attachedMsg ...string) {
 		}
 	}
 }
+
+func HandleWarn(e error, attachedMsg ...string) {
+	if e != nil {
+		if len(attachedMsg) > 0 {
+			log.Warnln(ERRORMSG, strings.Join(attachedMsg, " "), e)
+		} else {
+			log.Warnln(ERRORMSG, e)
+		}
+	}
+}
